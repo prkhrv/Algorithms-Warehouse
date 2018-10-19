@@ -25,6 +25,7 @@ public class stooge_sort
     {
         for (int i = 0; i < sorted_sequence.length; i++)
             System.out.print(sorted_sequence[i] + " ");
+        System.out.println();
     }
 
  

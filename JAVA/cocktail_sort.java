@@ -41,7 +41,7 @@ public class cocktail_sort
     public static void main(String[] args) 
     {
         Random random = new Random();
-        System.out.println("Sorting of randomly generated numbers using STOOGE SORT");
+        System.out.println("Sorting of randomly generated numbers using COCKTAIL SORT");
 	for (int i = 0; i < N; i++)
 		sequence[i] = Math.abs(random.nextInt(1000));
 		System.out.println("\nOriginal Sequence: ");
