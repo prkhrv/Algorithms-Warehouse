@@ -1,19 +1,24 @@
-
+import java.util.Scanner;
 package bubblesort;
 
 public class BubbleSort {
 
    
     public static void main(String[] args) {
-          int a[] ={37,56,61,34,27,11,14};  
-          System.out.println("Array Before Sort");  
-          for(int i=0; i<a.length; i++){  
+         Scanner sc=new Scanner(System.in);
+         System.out.println("Enter the number of elements to be sorted: ");
+         int n=sc.nextInt();
+         System.out.println("Enter "+n+" elements to the array to be sorted: ");
+         for(int i=0;i<n;i++)
+         int a[i] =sc.nextInt();  
+          System.out.println("Array entered Before Sort: \n");  
+          for(i=0; i<n; i++){  
           System.out.print(a[i]+ " ");  
           }  
           System.out.println();  
           bubbleSort(a);
-          System.out.println("Array After Sort");  
-          for(int i=0; i<a.length; i++){  
+          System.out.println("Array After Sort:\n");  
+          for(i=0; i<n; i++){  
           System.out.print(a[i]+ " ");  
           }  
          }  
