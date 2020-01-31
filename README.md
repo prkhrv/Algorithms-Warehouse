@@ -1,3 +1,3 @@
-# Python sorting
+# Sorting Algorithms-Warehouse
 
-All the sorting algorithms using Python3
+Sorting Algorithms WareHouse Using JAVA,C,Python,JavaScript
