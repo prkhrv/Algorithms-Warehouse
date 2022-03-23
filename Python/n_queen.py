@@ -3,15 +3,15 @@ import numpy as np
 
 
 # Solved using backtracking
-global N
-N = 8
+# global N
+# N = 8
 
 def createBoard(N):
     a = np.zeros((N, N),dtype=int)
     return a.tolist()
 
 
-def printSolution(board):
+def printSolution(board,N):
 	for i in range(N):
 		for j in range(N):
 			print (board[i][j], end = " ")
@@ -23,7 +23,7 @@ def printSolution(board):
 # already placed in columns from 0 to col -1.
 # So we need to check only left side for
 # attacking queens
-def isSafe(board, row, col):
+def isSafe(board, row, col,N):
 
 	# Check this row on left side
 	for i in range(col):
@@ -44,7 +44,7 @@ def isSafe(board, row, col):
 
 	return True
 
-def solveNQUtil(board, col):
+def solveNQUtil(board, col,N):
 	
 	# base case: If all queens are placed
 	# then return true
@@ -55,13 +55,13 @@ def solveNQUtil(board, col):
 	# this queen in all rows one by one
 	for i in range(N):
 
-		if isSafe(board, i, col):
+		if isSafe(board, i, col, N):
 			
 			# Place this queen in board[i][col]
 			board[i][col] = 1
 
 			# recur to place rest of the queens
-			if solveNQUtil(board, col + 1) == True:
+			if solveNQUtil(board, col + 1,N) == True:
 				return True
 
 			# If placing queen in board[i][col
@@ -81,15 +81,15 @@ def solveNQUtil(board, col):
 # note that there may be more than one
 # solutions, this function prints one of the
 # feasible solutions.
-def solveNQ():
+def solveNQ(N):
 	board = createBoard(N)
 
-	if solveNQUtil(board, 0) == False:
+	if solveNQUtil(board, 0,N) == False:
 		print ("Solution does not exist")
 		return False
 
-	printSolution(board)
+	printSolution(board,N)
 	return True
 
 # Driver Code
-solveNQ()
+solveNQ(4)
